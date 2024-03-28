@@ -6,10 +6,10 @@ const {Pool}=pg;
  
 // Create a connection pool
     const pool = new Pool({
-        user:process.env.DB_USER,
-        host: process.env.DB_HOST,
-        database: process.env.DB_DATABASE,
-        password: process.env.DB_PASSWORD,
+        user:process.env.PG_USER,
+        host: process.env.PG_HOST,
+        database: process.env.PG_DATABASE,
+        password: process.env.PG_PASSWORD,
         port: 5432, // Default PostgreSQL port
 });
  
