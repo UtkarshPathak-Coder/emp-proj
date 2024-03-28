@@ -14,7 +14,7 @@ const Home = () => {
     Adminrec();
   }, []);
   const Adminrec = () => {
-    axios.get('http://localhost:3000/auth/admin_record')
+    axios.get('https://emp-proj-uldl.onrender.com/auth/admin_record')
       .then(result => {
         if (result.data.Status) {
           setAdmins(result.data.Result); 
@@ -25,7 +25,7 @@ const Home = () => {
       });
   }
   const adminCount = () => {
-    axios.get('http://localhost:3000/auth/admin_count')
+    axios.get('https://emp-proj-uldl.onrender.com/auth/admin_count')
       .then(result => {
         if (result.data.Status) {
           setAdminTotal(result.data.admin); 
@@ -36,7 +36,7 @@ const Home = () => {
       });
   };
   const employeeCount = () => {
-    axios.get('http://localhost:3000/auth/employee_count')
+    axios.get('https://emp-proj-uldl.onrender.com/auth/employee_count')
       .then(result => {
         if (result.data.Status) {
           setEmployeeTotal(result.data.employee); 
@@ -47,7 +47,7 @@ const Home = () => {
       });
   };
   const salaryCount = () => {
-    axios.get('http://localhost:3000/auth/salary_count')
+    axios.get('https://emp-proj-uldl.onrender.com/auth/salary_count')
       .then(result => {
         if (result.data.Status) {
           setSalaryTotal(result.data.salary); 

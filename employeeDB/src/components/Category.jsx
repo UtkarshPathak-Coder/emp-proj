@@ -8,7 +8,7 @@ const Category = () => {
     const [category,setCategory]=useState([])
     const [showmodal,setshowModal]=useState(false);
     useEffect(()=>{
-    axios.get('http://localhost:3000/auth/Category')
+    axios.get('https://emp-proj-uldl.onrender.com/auth/Category')
     .then(result=>{
         if(result.data.Status)
         {

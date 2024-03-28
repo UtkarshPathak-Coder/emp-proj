@@ -16,7 +16,7 @@ const AddEmployee = ({ onClose }) => {
     const [category, setCategory] = useState([]);
     const [duplicateEmailError, setDuplicateEmailError] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:3000/auth/Category')
+        axios.get('https://emp-proj-uldl.onrender.com/auth/Category')
             .then(result => {
                 if (result.data.Status) {
                     setCategory(result.data.Result);
@@ -31,7 +31,7 @@ const AddEmployee = ({ onClose }) => {
         e.preventDefault();
         const lowercaseEmail = employee.email.toLowerCase();
         setEmployee({ ...employee, email: lowercaseEmail });
-        axios.post('http://localhost:3000/auth/addemployee', employee)
+        axios.post('https://emp-proj-uldl.onrender.com/auth/addemployee', employee)
             .then(result => {
                 if (result.data.Status) {
                     window.location.reload()

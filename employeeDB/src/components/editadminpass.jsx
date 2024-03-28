@@ -19,7 +19,7 @@ const EditadminPass = () => {
             return;
         }
 
-        axios.put(`http://localhost:3000/auth/edit_adminpass/${id}`, { password })
+        axios.put(`https://emp-proj-uldl.onrender.com/auth/edit_adminpass/${id}`, { password })
             .then(result => {
                 if (result.data.Status) {
                     navigate('/dashboard');

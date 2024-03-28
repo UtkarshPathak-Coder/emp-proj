@@ -10,7 +10,7 @@ const Addcategory = ({ onClose }) =>{
         e.preventDefault()
         
         const capitalizedCategory = category.toUpperCase()
-        axios.post('http://localhost:3000/auth/Addcategory',{category: capitalizedCategory})
+        axios.post('https://emp-proj-uldl.onrender.com/auth/Addcategory',{category: capitalizedCategory})
         .then(result=>{
             if(result.data.Status){
                 window.location.reload()

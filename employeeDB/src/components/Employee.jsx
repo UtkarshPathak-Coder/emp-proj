@@ -7,7 +7,7 @@ const Employee = () => {
     const[employee,setEmployee]=useState([])
     const [showmodal,setshowModal]=useState(false);
     useEffect(()=>{
-        axios.get('http://localhost:3000/auth/employee')
+        axios.get('https://emp-proj-uldl.onrender.com/auth/employee')
         .then(result=>{
             if(result.data.Status)
             {
@@ -21,7 +21,7 @@ const Employee = () => {
     const navigate=useNavigate()
     
     const handleDelete=(id)=>{
-        axios.delete('http://localhost:3000/auth/delete_employee/'+id)
+        axios.delete('https://emp-proj-uldl.onrender.com/auth/delete_employee/'+id)
         .then(result=>{
             if (result.data.Status){
                 window.location.reload()

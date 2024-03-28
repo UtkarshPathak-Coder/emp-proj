@@ -15,7 +15,7 @@ const EditEmployee = () => {
         });
         const [category,setCategory]=useState([])
         useEffect(()=>{
-            axios.get('http://localhost:3000/auth/Category')
+            axios.get('https://emp-proj-uldl.onrender.com/auth/Category')
             .then(result=>{
                 if(result.data.Status)
                 {
@@ -25,7 +25,7 @@ const EditEmployee = () => {
                     alert(result.data.Error)
                 }
             }).catch(err=>console.log(err))
-            axios.get('http://localhost:3000/auth/employee/'+id)
+            axios.get('https://emp-proj-uldl.onrender.com/auth/employee/'+id)
             .then(result=>{
                 setEmployee({
                     ...employee,
@@ -41,7 +41,7 @@ const EditEmployee = () => {
             const navigate=useNavigate()
     const handleSubmit =(e)=>{
         e.preventDefault();
-        axios.put('http://localhost:3000/auth/edit_employee/'+id,employee)
+        axios.put('https://emp-proj-uldl.onrender.com/auth/edit_employee/'+id,employee)
         .then(result=>
             {
                 if(result.data.Status){
